@@ -1,0 +1,109 @@
+<form [formGroup]="registerForm" class="border" (ngSubmit)="saveinfo()">
+    <div >
+            <div class="row-head bg-light g-0">
+                  <span class="head">Checkout</span>
+             </div>
+    </div>
+    
+    <div class="row">
+        <div class="col mb-3">
+        <label for="firstName" class="form=label">First Name</label>
+        <input 
+        type="text"
+         class="form-control" 
+         id="firstName" 
+         placeholder="First Name"
+         formControlName="firstName">
+    <div class="form-text"></div>
+    </div>
+    <div class="col mb-3">
+        <label for="lastName" class="form=label">Last Name</label>
+        <input 
+        type="text" 
+        class="form-control" 
+        id="lastName" 
+        placeholder="Last Name"
+        formControlName="lastName">
+        <div class="form-text"></div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col mb-3">
+        <label for="email" class="form=label">Email</label>
+        <input type="email" 
+        class="form-control" 
+        id="email" 
+        placeholder="Email"
+        formControlName="email">
+        <div class="form-text"></div>
+        </div>
+        <div class="col mb-3">
+            <label for="mobilenum" class="form=label">Mobile Number</label>
+            <input type="text"
+             class="form-control" 
+             id="mobilenum"
+             placeholder="Mobile Number"
+             formControlName="mobilenumber">
+            <div class="form-text"></div>
+        </div>
+    </div>
+   
+
+    <div class="row">
+        <div class="col mb-3">
+        <label for="address" class="form=label">Shipping Address</label>
+        <input 
+        type="text" 
+        class="form-control"
+        id="address" 
+        placeholder="Shipping Address"
+        formControlName="address">
+    <div class="form-text"></div>
+    </div>
+   
+    </div>
+  
+    <div class="row">
+        <div class="col mb-3">
+                <div class="m-1">Payment Method</div>
+                <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" value="m" id="male" formControlName="payMethod">
+                <i class="fa-brands fa-cc-mastercard" style="color: #f81212;"></i>&nbsp;
+                <label class="form-check-label" for="male">MasterCard</label>
+            </div>
+        
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" value="v" id="female" formControlName="payMethod">
+                <i class="fa-brands fa-cc-visa" style="color: #082e3a;"></i>&nbsp;
+                <label class="form-check-label" for="male">Visa</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" value="p" id="female" formControlName="payMethod">
+                <i class="fa-brands fa-paypal" style="color: #3b71ce;"></i>&nbsp;
+                <label class="form-check-label" for="male">PayPal</label>
+            </div>
+            </div>
+
+    </div>
+    
+    
+    <div class="row mb-3">
+    <div class="col-6 offset-3">
+    <div class="d-grid">
+    <button type="submit" class="btn btn-primary">Confirm</button>
+    </div>
+    </div>
+    </div>
+    </form>
+     
+    
+        <div  class="submittedData" *ngIf="submittedData" >
+            <h2>Confirm Details</h2>
+            <p>First Name: {{ submittedData.firstName }}</p>
+            <p>Last Name: {{ submittedData.lastName }}</p>
+            <p>Email: {{ submittedData.email }}</p>
+            <p>Mobile Number: {{ submittedData.mobilenumber }}</p>
+            <p>Shipping Address: {{ submittedData.address }}</p>
+          </div>
+  

@@ -1,0 +1,17 @@
+<header>
+    <div class="navbar navbar-dark bg-danger shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+        &nbsp;<i class="fa-solid fa-shop" style="font-size: 35px ;"></i> &nbsp;
+        <strong style="font-size: 30px;"> ShopE</strong>
+        <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search Product">
+        </div>
+        <span class="fa fa-search search-icon"></span>
+    </div>
+    <button routerLink="cart" class="btn btn-dark" style="margin-right: 10px;">
+    <i class="fa fa-cart-plus" style="font-size: 30px ;"></i>
+    <div class="badge bg-danger">{{totalItemNumber}}</div>
+    </button>
+    </div>
+</header>
+<router-outlet></router-outlet>

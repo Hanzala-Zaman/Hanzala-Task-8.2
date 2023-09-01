@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+         <div class="card col-md-3">
+            <img [routerLink]="['/product-detail', item.id]" src="{{item.image}}" alt="">
+            <h5 class="title">{{item.title}}</h5>
+            <p><strong>Price:</strong>&nbsp;£{{item.price}}</p>
+            <p></p>
+            <button class="btn btn-dark" (click)="addtoCart(item)">Add to cart</button>
+         </div>
+        </ng-container>
+    </div>
+</div>
